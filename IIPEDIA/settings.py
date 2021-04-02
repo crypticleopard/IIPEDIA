@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
-    'frontend.apps.FrontendConfig',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'IIPEDIA.urls'
@@ -126,3 +127,7 @@ STATIC_URL = '/static/'
 MEDIA_URL='/images/'
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'api/images')
+
+REST_FRAMEWORK={'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny']}
+
+CORS_ORIGIN_ALLOW_ALL = True
