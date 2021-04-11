@@ -25,6 +25,7 @@ class Book(models.Model):
     description=models.TextField(null=True,blank=True)
     year=models.CharField(max_length=8,choices=YEAR_IN_SCHOOL_CHOICES,default='General')
     image=models.ImageField(blank=True,null=True)
+    author=models.CharField(max_length=200,default='unknown')
 
     def __str__(self):
         return self.name
