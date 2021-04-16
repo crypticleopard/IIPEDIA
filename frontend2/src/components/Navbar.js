@@ -11,7 +11,7 @@ export default function Navbar(){
     const handleclick=()=>{setclick(!click)}
 
     return <div className='Nav-container'>
-        <Link className='Nav-Logo'>
+        <Link to='/' className='Nav-Logo'>
             IIPEDIA
         </Link>
         <div className='menu-icon' onClick={handleclick}>

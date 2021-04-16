@@ -28,22 +28,28 @@ export default function Books(props){
     const [details,setDetails]=useState([])
 
     const getBookDetails=()=>{
-        axios.get("http://127.0.0.1:8000/api/bookview")
-        .then(res=>res.data)
-        .then(data=>
-            data.map((detail)=>
-            <Grid item xs={12} md={4}>
-                <Bookcard
-                id={detail.id}
-                history={props.history}
-                title={detail.name}
-                author={detail.author}
-                content={detail.description}
-                src={detail.image}
-                availability={detail.availability}
-                year={detail.year}
-                />
-            </Grid>)).then(data=>setDetails(data))
+        if (!localStorage.getItem('token')){
+            props.history.push('/login')
+        }
+        else{
+            let token = localStorage.getItem('token')
+            axios.get("http://127.0.0.1:8000/api/bookview",{ 'headers': { Authorization: `Token ${token}` } })
+            .then(res=>res.data)
+            .then(data=>
+                data.map((detail)=>
+                <Grid item xs={12} md={4}>
+                    <Bookcard
+                    id={detail.id}
+                    history={props.history}
+                    title={detail.name}
+                    author={detail.author}
+                    content={detail.description}
+                    src={detail.image}
+                    availability={detail.availability}
+                    year={detail.year}
+                    />
+                </Grid>)).then(data=>setDetails(data))}
+        
         }
 
     useEffect(getBookDetails,[])

@@ -1,12 +1,22 @@
 import React,{useEffect,useState} from 'react'
 import axios from 'axios'
 import Bookcomp from '../components/Bookcomp'
+import Reviews from '../components/Reviews'
 
 export default function Book(props){
     const [detail,setDetail]=useState({})
 
     const getBookDetail=()=>{
-        axios.get('http://127.0.0.1:8000/api/bookdetailview?id='+props.match.params.id).then(response=>setDetail(response.data))
+        if (!localStorage.getItem('token')){
+            props.history.push('/login')
+        }
+        else{
+
+            let token = localStorage.getItem('token')
+
+            axios.get('http://127.0.0.1:8000/api/bookdetailview?id='+props.match.params.id,{ 'headers': { Authorization: `Token ${token}` }})
+            .then(response=>setDetail(response.data))
+        }
     }
 
     useEffect(getBookDetail,[])
@@ -21,5 +31,6 @@ export default function Book(props){
             src={detail.image}
             author={detail.author}
         />
+        <Reviews/>
     </div>)
 }
