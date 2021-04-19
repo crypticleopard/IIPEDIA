@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { Grid,Paper, TextField, Button, Typography} from '@material-ui/core'
 import {Link} from 'react-router-dom'
 import Image from '../images/loginbackground.jpg'
@@ -20,6 +20,18 @@ const useStyles = makeStyles((theme) => ({
       textDecoration:'none',
       color:'#000000',
 }
+
+const Bannerstyle={
+    position:'fixed',
+    top:'5px',
+    left:'5px',
+    fontFamily: 'Kaushan Script',
+    fontSize: '60px',
+    textDecoration:'none',
+    cursor:'pointer',
+    color:'#ffffff',
+}
+
 const backgroundstyle={
     zIndex:'-1',
     objectFit:'cover',
@@ -33,6 +45,14 @@ const Login = (props) => {
     const [roll,setRoll]= useState('')
     const [password,setPassword]=useState('')
     const [error,setError]=useState('')
+
+    useEffect(()=>{
+        var element = document.querySelector('.Nav-container')
+        element.classList.add("noreq");
+        return () => {
+            element.classList.remove("noreq");
+        }
+    },[])
 
     const loginButtonClicked=()=>{
         axios({
@@ -59,6 +79,7 @@ const Login = (props) => {
     return (
         <div>
         <img src={Image} className='background-img' style={backgroundstyle} alt='background'/>
+        <div style={Bannerstyle}>IIPEDIA</div>
         <Grid container spacing={0} className={classes.loginContainer}>
         <Paper elevation={10} style={paperStyle}>
                 <Grid align='center'>
@@ -74,14 +95,12 @@ const Login = (props) => {
                     value={roll}
                     onChange={(e)=>{setRoll(e.target.value)}} 
                     fullWidth/>
-                <TextField
-                    error={error} 
+                <TextField 
                     label='Password' 
                     placeholder='Enter password' 
                     type='password'
                     value={password}
                     onChange={(e)=>{setPassword(e.target.value)}}
-                    helperText={error}
                     fullWidth/>
                 <Button type='submit' color='primary' variant="contained" style={btnstyle} onClick={loginButtonClicked} fullWidth>Sign in</Button>
                 <Typography > You don't have an account ?

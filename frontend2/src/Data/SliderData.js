@@ -32,8 +32,8 @@ export const SliderData=[
     {
         image:ImageFive,
         alt:'Image5',
-        description:'Banner',
-        class:'IIPE set to launch doctoral programmes this academic year',
+        class:'Banner',
+        description:'IIPE set to launch doctoral programmes this academic year',
     },
 ]
 

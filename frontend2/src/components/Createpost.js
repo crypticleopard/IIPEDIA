@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid'
 import axios from 'axios'
 
-export default function CreateReview(props){
+export default function Createpost(props){
 
     const handlePostClick=()=>{
         if (!localStorage.getItem('token')){
@@ -14,7 +14,7 @@ export default function CreateReview(props){
             let token = localStorage.getItem('token')
             axios({
                 method: 'post',
-                url: 'http://127.0.0.1:8000/api/createreview?id='+props.id+'&key='+token,
+                url: 'http://127.0.0.1:8000/api/createcommunity?key='+token,
                 data: {
                     'main':main
                 },
@@ -40,8 +40,8 @@ export default function CreateReview(props){
         fullWidth
         multiline
         id="standard-multiline-flexible"
-        label="Review"
-        placeholder="Write your reviews here"
+        label="Community Post"
+        placeholder="Write your community post here"
         value={main}
         onChange={(e)=>{setMain(e.target.value)}} 
         rowsMax={4}

@@ -36,3 +36,14 @@ class Review(models.Model):
     book=models.ForeignKey(Book,on_delete=models.CASCADE)
     time=models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering=['-id']
+
+class Community(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    main=models.TextField()
+    time=models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering=['-id']
+

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -69,6 +69,17 @@ export default function Register(props) {
     color:'#000000',
 }
 
+const Bannerstyle={
+  position:'fixed',
+  top:'5px',
+  left:'5px',
+  fontFamily: 'Kaushan Script',
+  fontSize: '60px',
+  textDecoration:'none',
+  cursor:'pointer',
+  color:'#ffffff',
+}
+
 const backgroundstyle={
     zIndex:'-1',
     objectFit:'cover',
@@ -78,9 +89,18 @@ const backgroundstyle={
     width: '100vw',
 }
 
+useEffect(()=>{
+  var element = document.querySelector('.Nav-container')
+  element.classList.add("noreq");
+  return () => {
+      element.classList.remove("noreq");
+  }
+},[])
+
   return (
     <div className={classes.registerContainer}>
     <img src={Image} className='background-img' style={backgroundstyle} alt='background'/>
+    <div style={Bannerstyle}>IIPEDIA</div>
     <Container style={{background:'#ffffff'}} component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>

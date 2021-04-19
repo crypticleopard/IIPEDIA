@@ -8,6 +8,7 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import Footer from './components/Footer.js'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Search from './pages/Search'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Route path='/book/:id' exact component={Book}/>
       <Route path='/login' exact component={Login}/>
       <Route path='/register' exact component={Register}/>
+      <Route path='/search/:query' exact component={Search}/>
     </Switch>
     <Footer/>
     </Router>

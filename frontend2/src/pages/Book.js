@@ -31,6 +31,6 @@ export default function Book(props){
             src={detail.image}
             author={detail.author}
         />
-        <Reviews/>
+        <Reviews id={props.match.params.id}/>
     </div>)
 }

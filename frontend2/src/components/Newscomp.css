@@ -21,7 +21,7 @@
     height: 100%;
     z-index: 1;
     opacity: 0;
-    transition: opacity 2s ease;
+    transition: opacity 1s ease;
 }
 
 .Slider.active{
@@ -63,12 +63,24 @@
     object-fit: cover;
 }
 
-.Banner,.Description{
+.Banner{
     position: relative;
     z-index: 10;
     font-family: 'Knewave', cursive;
     font-size: 70px;
     color:#ececec;
+    padding-left:5%;
+    padding-right:5%;
+}
+
+.descriptive{
+    position: relative;
+    z-index: 10;
+    color:#ececec;
+    font-family: 'Lobster', cursive;;
+    font-size: 40px;
+    padding-left:5%;
+    padding-right:5%;
 }
 
 .Arrow{
@@ -97,4 +109,17 @@
     position: fixed;
     height: 100%;
     width: 100%;
+}
+
+@media screen and (max-width:768px){
+    .Banner{
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 50px;
+        text-align: center;
+    }
+    .descriptive{
+        padding-left:10%;
+        padding-right:10%;
+    }
 }
