@@ -10,8 +10,8 @@ User interface of the application is developed using Reactjs and material-ui,axi
 <br/>
 
 As soon as a user visits the website for the first time he is prompted to sign in or sign up.
-![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Login.png)
-![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Register.png)
+![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Loginpg.png)
+![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Registerpg.png)
 Authentication is done is using token authentication. As soon as user signs in a token is being generated for the user for that particular session which is being stored in the local storage so that user dosen't have to login every time he visits the website.
 Homepage consists of 2 parts News component and Books section.
 News component is basically a automated image carousel which contains all the current news of the college.
@@ -29,7 +29,7 @@ As soon as you click on a book card you are directed to that particular book's p
 <br/>
 
 There is also a Community section in the app where each person can post something and all other users can see that. It can be said as a simplified twitter rip-off.
-![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Community.png)
+![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Communitypg.png)
 <br/>
 
 About section is just a static webpage containing information about the college.
