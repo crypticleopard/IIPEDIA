@@ -16,8 +16,8 @@ As soon as a user visits the website for the first time he is prompted to sign i
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Registerpg.png)
 <br/>
 
-Authentication is done is using token authentication. As soon as user signs in a token is being generated for the user for that particular session which is being stored in the local storage so that user dosen't have to login every time he visits the website.
-Homepage consists of 2 parts News component and Books section.
+Authentication is done is using token authentication. As soon as user signs in a token is being generated for the user for that particular session which is being stored in the local storage so that user dosen't have to login every time he visits the website.<br/>
+Homepage consists of 2 parts News component and Books section.<br/>
 News component is basically a automated image carousel which contains all the current news of the college.
 <br/>
 
