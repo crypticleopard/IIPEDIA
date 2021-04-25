@@ -10,20 +10,33 @@ User interface of the application is developed using Reactjs and material-ui,axi
 <br/>
 
 As soon as a user visits the website for the first time he is prompted to sign in or sign up.
+<br/>
+
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Loginpg.png)
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Registerpg.png)
+<br/>
+
 Authentication is done is using token authentication. As soon as user signs in a token is being generated for the user for that particular session which is being stored in the local storage so that user dosen't have to login every time he visits the website.
 Homepage consists of 2 parts News component and Books section.
 News component is basically a automated image carousel which contains all the current news of the college.
+<br/>
+
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Newscomp.png)
 Books section is the list of all books present in the library.
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Firstb1.png)
-![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Firstb2.png)
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Firstb3.png)
+<br/>
+
 A search bar is being given for the user so it is easy to navigate between books for him.
+<br/>
+
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/searchpg.png)
+<br/>
+
 Each book card in the list contains information about the current availability in library,for which year it is recommended ,teachers who have recommended it,etc. 
 As soon as you click on a book card you are directed to that particular book's page. Each book's page contain basic information about the book and a review section which contains reviews from all other users. on this page you can post review, check for book's availability and get personalized feedback for that particular book.
+<br/>
+
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/bookpg1.png)
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/bookpg2.png)
 <br/>
@@ -32,8 +45,10 @@ There is also a Community section in the app where each person can post somethin
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Communitypg.png)
 <br/>
 
-About section is just a static webpage containing information about the college.
-Website is highly responsive and has been made keeping user friendliness in mind.
+About section is just a static webpage containing information about the college.<br/>
+
+Website is highly responsive and has been made keeping user friendliness in mind.<br/>
+
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Responsive.png)
 
 ## Backend and API generation
