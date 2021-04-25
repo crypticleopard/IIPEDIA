@@ -21,10 +21,10 @@ Homepage consists of 2 parts News component and Books section.
 News component is basically a automated image carousel which contains all the current news of the college.
 <br/>
 
-![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Newscomp.png)
-Books section is the list of all books present in the library.
+![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Newscomp.png)<br/>
+Books section is the list of all books present in the library.<br/><br/>
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Firstb1.png)
-![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Firstb3.png)
+![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Firstb2.png)
 <br/>
 
 A search bar is being given for the user so it is easy to navigate between books for him.
