@@ -52,6 +52,7 @@ Website is highly responsive and has been made keeping user friendliness in mind
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/Responsive.png)
 
 ## Backend and API generation
+
 Whole backend of iipedia is developed using django and rest framework.<br/>
 The database is designed using django models.
 ![img](https://github.com/crypticleopard/IIPEDIA/blob/master/assets/djangoadmin.png)<br/>
